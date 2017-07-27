@@ -24,5 +24,10 @@ namespace IMDB.Models
         public System.Data.Entity.DbSet<IMDB.Models.Actor> Actors { get; set; }
 
         public System.Data.Entity.DbSet<IMDB.Models.Genre> Genres { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

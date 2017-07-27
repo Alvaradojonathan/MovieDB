@@ -4,48 +4,30 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Best Actors</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("+ Actor", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ActorName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DOB)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Gender)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Nationality)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ActorName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DOB)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Gender)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nationality)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ActorID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ActorID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ActorID })
-        </td>
-    </tr>
-}
-
-</table>
+    <div class="row container tileAlign">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3 col-sm-offset-3 col-sm-5 colBorder thumbnail">
+                <h4>@Html.DisplayFor(modelItem => item.ActorName)</h4>
+                <img class="img-responsive" src="http://www.oscars.org/sites/all/themes/oscarbase/images/banner.ampas.jpg"/>
+                <div class="caption">
+                    <h5>Gender: @Html.DisplayFor(modelItem => item.Gender)</h5>
+                    <h5>Date of birth: @Html.DisplayFor(modelItem => item.DOB)</h5>
+                    <h5>Nationality: @Html.DisplayFor(modelItem => item.Nationality)</h5>
+                    <hr />
+                    <p id="details">@Html.ActionLink("Details", "Details", new { id = item.ActorID })</p>
+                </div>
+                @*<p>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ActorID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ActorID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ActorID })
+                </p>*@
+            </div>
+        }
+    </div>

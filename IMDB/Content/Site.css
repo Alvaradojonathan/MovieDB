@@ -22,3 +22,25 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.colBorder {
+    margin:3px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    opacity:0.8;
+}
+
+#details{
+    text-align:right;
+}
+
+.body-content {
+    background-image: url(https://upload.wikimedia.org/wikipedia/en/d/dc/Academy_Award_trophy.jpg);
+    background-repeat:no-repeat;
+    background-position:right;
+    background-position-y:center;
+}
+
+.detailTile {
+    margin-left:auto;
+    margin-right:auto;
+}

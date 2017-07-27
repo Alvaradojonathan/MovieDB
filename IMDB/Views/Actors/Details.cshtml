@@ -8,43 +8,22 @@
 
 <div>
     <h4>Actor</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ActorName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ActorName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DOB)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DOB)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Gender)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Gender)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Nationality)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nationality)
-        </dd>
-
-    </dl>
+    <div class="row container">
+        <div class="col-md-4 detailTile thumbnail">
+            <h4>@Html.DisplayFor(model => model.ActorName)</h4>
+            <img class="img-responsive" src="http://www.oscars.org/sites/all/themes/oscarbase/images/banner.ampas.jpg" />
+            <div class="caption">
+                <h5>Gender: @Html.DisplayFor(model => model.Gender)</h5>
+                <h5>Date of birth: @Html.DisplayFor(model => model.DOB)</h5>
+                <h5>Nationality: @Html.DisplayFor(model => model.Nationality)</h5>
+                <br />
+                <br />
+                <br />
+                <hr />
+                <p>
+                    @Html.ActionLink("Back to List", "Index")
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ActorID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
