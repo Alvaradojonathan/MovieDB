@@ -15,9 +15,13 @@ namespace IMDB.Models
         public DateTime ReleaseDate { get; set; }
         public double BoxOffice { get; set; }
 
-        [ForeignKey("Genre")]
-        public int GenreID { get; set; }
-        public virtual Genre Genre { get; set; }
+        //[ForeignKey("Genre")]
+        //public int GenreID { get; set; }
+        //public virtual Genre Genre { get; set; }
+
+        //[ForeignKey("Actor")]
+        //public int ActorID { get; set; }
+        //public virtual Actor Actor { get; set; }
 
         public virtual ICollection<Actor> Actors { get; set; }
 

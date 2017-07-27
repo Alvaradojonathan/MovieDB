@@ -9,8 +9,8 @@ namespace IMDB.Models
     public class Genre
     {
         [Key]
-        public int GenreID;
-        public string GenreName;
+        public int GenreID { get; set; }
+        public string GenreName { get; set; }
 
         public virtual ICollection<Movie> Movies { get; set; }
     }

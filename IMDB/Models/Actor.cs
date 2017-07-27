@@ -16,8 +16,8 @@ namespace IMDB.Models
         public string Gender { get; set; }
         public string Nationality { get; set; }
 
-        [ForeignKey("Movie")]
-        public int MovieID { get; set; }
+        //[ForeignKey("Movie")]
+        //public int MovieID { get; set; }
         
         public virtual ICollection<Movie> Movies { get; set; }
     }
